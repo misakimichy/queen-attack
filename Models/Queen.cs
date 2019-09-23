@@ -1,10 +1,10 @@
 using System;
 
-namespace QueenAttack.Models;
+namespace QueenAttack.Models
 {
   class Queen
   {
-    public static bool canAttack(int xQueen, int uQueen, int xComp, int yComp)
+    public static bool canAttack(int xQueen, int yQueen, int xComp, int yComp)
     {
       // Horizontal or vertical match
       if(xQueen == xComp || yQueen == yComp)
