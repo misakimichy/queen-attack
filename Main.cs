@@ -1,10 +1,26 @@
 using System;
 using System.Collections.Generic;
-using QueenAttack.Models;
 
-public class App
+public class Queen
 {
-  static void Main()
+  public static bool canAttack(int xQueen, int yQueen, int xComp, int yComp)
+    {
+      // Horizontal or vertical match
+      if(xQueen == xComp || yQueen == yComp)
+      {
+        return true;
+      }
+      // Diagonal match
+      else if (Math.Abs(xQueen - xComp) == Math.Abs(yQueen - yComp))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+    static void Main()
   {
     Dictionary<string, int> xCoordinates = new Dictionary<string, int>() { {"A", 1}, {"B", 2}, {"C", 3}, {"D", 4} };
   
